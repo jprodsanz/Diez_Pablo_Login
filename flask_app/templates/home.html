@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for record in records %}
+    <article class="media content-section">
+        <div class="media-body">
+         <div class="article-metadata">
+            <a class="mr-2" href="#">{{ record.user }}</a>
+            <small class="text-muted">{{ record.date_posted }}</small>
+          </div>
+          <h2><a class="article-title" href="#">{{ record.title }}</a></h2>
+          <p class="article-content">{{ record.occupation }}</p>
+        </div>
+      </article>
+    {% endfor %}
+{% endblock content %}
